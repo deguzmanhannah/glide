@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/* Plugin: jQuery Parallax Version 1.1.3 Author: Ian Lunn Author URL: http://www.ianlunn.co.uk/ Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/ License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/ */
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "marketdeco";
+}
+
+@font-face {
+	font-family: "marketdeco";
+	src: url(../root/fonts/Market_Deco.ttf);
+}
+
+/** Nav styles */
+
+#nav{
+	width: 100%;
+	height: 20%;
+	background-color: #9483b4;
+	position: fixed;
+	z-index: 210;
+}
+
+#nav a { 
+	text-decoration: none;
+	color: white;
+	line-height: 10%;
+	margin-top: 30px;
+	margin-left: 100px;
+	font-size: 20px;
+}
+
+#nav a:hover {
+	color: black;
+}
+
+#nav img {
+	width: 20%;
+	display: block;
+	margin-left: 120px;
+	margin-top: 20px;
+	float: left;
+}
+
+#navleft {
+	float: left;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+#navright {
+	float: left;
+	margin-top: 100px;
+	
+}
+
+/**Screen 1 styles */
+
+
+#screen1_bg {
+	background:url(images/screen1_bg.jpg) top center no-repeat fixed;
+	height: 1000px;
+	width: 1440px;
+}
+
+.screen1_element_logo img {
+	margin: 350px 0px 0px 150px;
+	width: 35%;
+}
+
+/**Screen 2 styles */
+
+#screen2_bg {
+	background: url(images/screen2_bg.jpg) top center no-repeat fixed;
+	height: 1000px;
+	overflow: hidden;
+}
+
+.screen2_title {
+	background: url(images/snowboardtxt.png) no-repeat;
+	height: 1000px;
+	margin-top: 100px;
+	margin-left: 370px;
+	position: absolute;
+	width: 1000px;
+	z-index: 200;
+}
+
+.screen2_snowboard1 {
+	background: url(images/snowboard1.png) no-repeat;
+	height: 1000px;
+	margin-top: 60px;
+	position: absolute;
+	width: 1000px;
+	z-index: 201;
+}
+
+.screen2_snowboard2 {
+	background: url(images/snowboard2.png) no-repeat;
+	height: 1000px;
+	margin-top: 70px;
+	position: absolute;
+	width: 1000px;
+	z-index: 202;
+}
+
+.screen2_snowboard3 {
+	background: url(images/snowboard3.png) no-repeat;
+	height: 1000px;
+	width: 100%;
+	margin-top: 60px;
+	margin-left: 300px;
+	position: absolute;
+	width: 1000px;
+	z-index: 203;
+}
+
+/* snowboard1 info styles */
+.snow1_text {
+	width: 300px;
+	height: auto;
+	position: relative;
+	top: 580px;
+	left: 60px;
+}
+
+.snow1_text h3 {
+	font-family: "marketdeco";
+	font-size: 29px;
+	text-align: center;
+}
+
+.snow1_text p {
+	font-family: "marketdeco";
+	font-size: 14px;
+}
+
+.buynow {
+	width: 100px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: #945d99;
+	margin-left: 100px;
+}
+
+.snow1_text a {
+	font-family: "marketdeco";
+	font-size: 20px;
+	width: 180px;
+	text-decoration: none;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 14px;
+	font-size: 16px;
+}
+
+/* snowboard2 info styles */
+
+.snow2_text {
+	width: 300px;
+	height: auto;
+	position: relative;
+	top: 390px;
+	left: 590px;
+}
+
+.snow2_text h3 {
+	font-family: "marketdeco";
+	font-size: 29px;
+	text-align: center;
+}
+
+.snow2_text p {
+	font-family: "marketdeco";
+	font-size: 14px;
+}
+
+.snow2_text a {
+	font-family: "marketdeco";
+	font-size: 20px;
+	width: 180px;
+	text-decoration: none;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 14px;
+	font-size: 16px;
+}
+
+/* snowboard3 info styles */
+
+.snow3_text {
+	width: 300px;
+	height: auto;
+	position: relative;
+	top: 180px;
+	left: 1030px;
+}
+
+.snow3_text h3 {
+	font-family: "marketdeco";
+	font-size: 29px;
+	text-align: center;
+}
+
+.snow3_text p {
+	font-family: "marketdeco";
+	font-size: 14px;
+}
+
+.snow3_text a {
+	font-family: "marketdeco";
+	font-size: 20px;
+	width: 180px;
+	text-decoration: none;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 14px;
+	font-size: 16px;
+}
+
+
+/**Screen 3 styles  */
+#screen3_bg {
+	background: url(images/screen3_bg.png) top center no-repeat fixed;
+	height: 1000px;
+	overflow: auto;
+}
+
+.screen3_title {
+	background: url(images/Apparel.png) no-repeat;
+	height: 1000px;
+	margin-top: 100px;
+	margin-left: 470px;
+	position: absolute;
+	width: 1000px;
+
+}
+
+.screen3_tshirt {
+	background: url(images/t-shirt.png) no-repeat;
+	height: 1000px;
+	margin-left: 180px;
+	margin-top: 100px;
+	position: absolute;
+	width: 1000px;
+	z-index: 200;
+}
+
+.tshirt_info {
+	background: url(images/tshirt_info.png) no-repeat;
+	height: 1000px;
+	margin-left: 180px;
+	margin-top: 150px;
+	position: absolute;
+	width: 1000px;
+	z-index: 200;
+}
+
+.jacket {
+	background: url(images/jacket.png) no-repeat;
+	height: 1000px;
+	margin-left: 180px;
+	margin-top: 250px;
+	position: absolute;
+	width: 1000px;
+	z-index: 200;
+}
+
+.jacketinfo {
+	background: url(images/jacketinfo.png) no-repeat;
+	height: 1000px;
+	margin-left: 180px;
+	margin-top: 300px;
+	position: absolute;
+	width: 1000px;
+	z-index: 209;
+}
+
+.screen3_helmet {
+	background: url(images/helmet.png) no-repeat;
+	height: 1000px;
+	margin-left: 180px;
+	margin-top: 420px;
+	position: absolute;
+	width: 1000px;
+	z-index: 209;
+}
+
+.helmetinfo {
+	background: url(images/helmetinfo.png) no-repeat;
+	height: 1000px;
+	margin-left: 180px;
+	margin-top: 450px;
+	position: absolute;
+	width: 1000px;
+	z-index: 200;
+}
+
+/* *screen4 styles */
+
+
+#screen4_bg {
+	background: url(images/screen4_bg.png) no-repeat fixed;
+	height: 650px;
+	overflow: hidden;
+}
+
+.ad {
+	background: url(images/ad.png) no-repeat;
+	height: 650px;
+	position: absolute;
+	width: 1000px;
+	z-index: 209;
+}
+
+.adtxt {
+	background: url(images/adtxt.png) no-repeat;
+	height: 650px;
+	position: absolute;
+	width: 1000px;
+	z-index: 209;
+	margin-left: 250px;
+}
+
+footer {
+	width: 100%;
+	height: 200px;
+	background-color:#9483b4;
+}
+
+.screen4_socialicons img {
+	position: relative;
+	top: 30px;
+}
+
+.screen4_socialicons p {
+	position: relative;
+	top: 30px;
+}
+
+
+
+.screen4_socialicons img {
+	display: block;
+	margin: 500px auto 0 auto;
+}
+
+.screen4_socialicons p {
+	text-align: center;
+	color: white;
+	font-family: arial;
+}

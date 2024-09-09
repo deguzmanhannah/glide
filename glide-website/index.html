@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Glide Snowboard Website</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<nav id="nav"> 
+		<div id="navleft">
+			<a href="#screen1_bg"> Home </a>
+			<a href="#screen2_bg"> Snowboards </a>
+		</div>
+			<img src="images/SVG/glidewhite.svg" alt="logo" />
+		<div id="navright"> 
+			<a href="#screen3_bg"> Apparel </a>
+			<a href="#screen4_bg"> About </a>
+		</div>
+	   
+	</nav>
+
+	<!-- !SCREEN 1 -->
+	
+	<div id="screen1_bg">
+		
+	    	<div class="screen1_element_logo">
+	    	
+	    		<img src="images/featuredlogo.png" alt="glide">
+			
+	        </div>
+	   
+	</div> <!-- #screen1_bg -->
+	
+	<!-- !SCREEN 2 -->
+		<div id="screen2_bg">
+
+			<div class="screen2_title"></div>
+
+    		<div class="screen2_snowboard1"></div>
+    		
+    		<div class="screen2_snowboard2"></div>
+    		
+    		<div class="screen2_snowboard3"></div>
+
+			<div class="snow1_text">
+
+				<h3>Ridge Rider</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<div class="buynow"><a href="#">Buy Now</a> </div>
+
+			</div>
+
+			<div class="snow2_text">
+
+				<h3>Cool Carver</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<div class="buynow"><a href="#">Buy Now</a> </div>
+
+			</div>
+
+
+			<div class="snow3_text">
+
+				<h3>Smooth Glide</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<div class="buynow"><a href="#">Buy Now</a> </div>
+
+			</div>
+    		
+		</div> 
+
+		<!-- !SCREEN 3 -->
+	
+	<div id="screen3_bg">
+		
+		<div class="screen3_title"></div>
+
+    		<div class="screen3_tshirt"></div>
+			<div class="tshirt_info"></div>
+
+			<div class="jacket"></div>
+			<div class="jacketinfo"></div>
+
+			<div class="screen3_helmet"></div>
+			<div class="helmetinfo"></div>
+
+    			    
+	</div> <!-- #screen3_bg -->
+
+	<!-- !SCREEN 4	 -->
+	
+	<div id="screen4_bg">
+
+		<div class="ad"> </div>
+		<div class="adtxt"></div>
+
+		<footer>      
+
+			<div class="screen4_socialicons">
+		    
+				<img src="images/socials.png" alt="contact" />		
+				
+				<p>Copyright &copy; 2021 All Rights Reserved</p>
+				
+			</div> 
+
+
+		</footer>
+		
+	   
+	    
+	</div> <!-- #screen4_bg -->
+	
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+   
+    <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+    
+    <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+	
+	<script src="scripts/smoothscroll.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$('#nav').localScroll(800);
+	
+		//.parallax(xPosition, speedFactor) options:
+			
+			//xPosition - Horizontal position of the element
+			
+			//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	
+		$('#screen1_bg').parallax("50%", 0.1);
+
+		$('#screen2_bg').parallax("50%", 0.1);
+		$('.screen2_snowboard1').parallax("10%", 1);
+		$('.screen2_snowboard2').parallax("80%", 1);
+		$('.screen2_snowboard3').parallax("100%", 1);
+
+
+
+		$('#screen3_bg').parallax("50%", 0.3);
+		$('.screen3_tshirt').parallax("1%", 2);
+		$('.tshirt_info').parallax("90%", 2);
+		$('.jacket').parallax("100%", 1.5);
+		$('.jacketinfo').parallax("3%", 1.5);
+		$('.screen3_helmet').parallax("7%", 1.5);
+		$('.helmetinfo').parallax("92%", 1.5);
+
+		$('#screen4_bg').parallax("50%", 0.3);
+		$('.ad').parallax("40%", 0.75);
+		$('.adtxt').parallax("100%", 1.4);
+		$('#screen4_socialicons').parallax("50%", 1);
+
+	})
+	</script>
+	
+</body>
+</html>
